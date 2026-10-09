@@ -1,23 +1,7 @@
 # CedarBridge Learning — Agent-Powered Business Assistant
+## Ghada Al Danab
 
-
-A working Gradio chatbot for a **fictional** Lebanese online tutoring business. Uses OpenAI Chat Completions, an LLM-powered three-way router, function tools for lead collection and feedback logging, short-term conversation memory, and an optional reflection step.
-
-## Requirements covered
-
-| Assignment item | Location / implementation |
-| --- | --- |
-| Fictional business with mission, services, team, unique value | `me/about_business.pdf` and `me/business_summary.txt` |
-| Clearly separate persona and instructions | `business_agent.ipynb` and `agent_core.py` (`PERSONA`, `INSTRUCTIONS`) |
-| Three-intent router | `BusinessAgent.route`: `general_question`, `lead_collection`, `feedback_unknown` |
-| Model-triggered lead tool | `record_customer_interest(email, name, message)` |
-| Model-triggered feedback tool | `record_feedback(question)` |
-| MCP-style tool documentation | `TOOL_SCHEMAS`, with names, descriptions, parameters, return contracts |
-| API integration, history, tool-call loop | `BusinessAgent.respond` |
-| Gradio ChatInterface | `app.py` and final notebook cell |
-| Bonus: reflection and original/revised logs | set `REFLECTION_ENABLED=true`; `logs/reflections.jsonl` |
-| Optional bonus: Hugging Face Spaces | instructions below + `SPACE_README.md` |
-| Offline behavior tests | `tests/test_agent.py` |
+A  Gradio chatbot for a Lebanese online tutoring business. Uses OpenAI Chat Completions, an LLM-powered three-way router, function tools for lead collection and feedback logging, short-term conversation memory, and an optional reflection step.
 
 ## Quick start (Windows PowerShell)
 
