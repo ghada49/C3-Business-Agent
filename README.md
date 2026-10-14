@@ -5,7 +5,7 @@ A  Gradio chatbot for a Lebanese online tutoring business. Uses OpenAI Chat Comp
 
 ## Quick start (Windows PowerShell)
 
-From the extracted `business_bot` folder:
+From the `C3-Business-Agent` repository folder:
 
 ```powershell
 py -3.11 -m venv .venv
@@ -79,7 +79,7 @@ The router is a small LLM classification call, not a keyword-only simulation. Th
 
 Console output includes `[router] ...`, `[tool] ...`, and (when enabled) `[reflection] ...`. Tool results are written to `.jsonl` files, one JSON record per line. **The example `.example` email addresses are intentionally non-deliverable**.
 
-**The LLM can occasionally misroute or respond imperfectly.** Verify the above demo cases with your actual account/model; the offline tests below validate code behavior and tool handling, not provider model quality. The chatbot does not really book lessons or send emails.
+**The LLM can occasionally misroute or respond imperfectly.** Run the demo cases above with your actual API key and model to verify routing, replies, and tool calls. The chatbot does not really book lessons or send emails.
 
 ## Optional reflection bonus
 
@@ -96,7 +96,7 @@ For each final answer, the agent asks the LLM to review the draft for unsupporte
 
 1. Create a new Space with **Gradio** as the SDK and **Python**.
 2. Upload the project (without `.env`, `logs/*.jsonl`, local virtualenvs or keys).
-3. Copy the contents of `SPACE_README.md` to the Space's top-level `README.md` to provide its metadata header.
+3. Keep the Space-generated `README.md` with its Gradio metadata (`sdk: gradio`, `app_file: app.py`); do not overwrite it with this repository's `README.md`.
 4. In the Space **Settings → Variables and secrets**, add a secret named `OPENAI_API_KEY`; set `OPENAI_MODEL` and `REFLECTION_ENABLED` as ordinary variables if you wish.
 5. Spaces should run `app.py`; wait for the build and confirm the sample prompts work. Logs on free Spaces are not durable.
 
